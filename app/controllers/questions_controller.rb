@@ -19,7 +19,7 @@ class QuestionsController < ApplicationController
 
   private
   def retrieve_questions
-    @questions ||= JSON.parse(client.questions.body)['items']
+    @questions ||= JSON.parse(client.questions)['items']
   end
 
   def sort_questions
